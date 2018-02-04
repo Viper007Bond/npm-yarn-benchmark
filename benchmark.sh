@@ -4,7 +4,7 @@
 
 repeats=3
 output_folder='reports'
-libraries=('angular2' 'ember' 'react')
+libraries=('jetpack' 'ember' 'react')
 tools=('npm' 'yarn')
 base_dir=$PWD
 
