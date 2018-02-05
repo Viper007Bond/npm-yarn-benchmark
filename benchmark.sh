@@ -4,7 +4,7 @@
 
 repeats=3
 output_folder='reports'
-libraries=('jetpack' 'ember' 'react')
+libraries=('jetpack')
 tools=('npm' 'yarn')
 base_dir=$PWD
 
@@ -150,8 +150,8 @@ show_results() {
     echo ' -------------------------- RESULTS (seconds) -------------------------- '
     echo ' ----------------------------------------------------------------------- '
 
-    awk 'BEGIN {printf("| %24s | %12s | %12s | %12s | \n" , " ", "'${libraries[0]}'", "'${libraries[1]}'", "'${libraries[2]}'")}
-        {printf("| %24s | %12.3f | %12.3f | %12.3f | \n", $1, $2, $3, $4)}' $all_file
+    awk 'BEGIN {printf("| %24s | %12s \n" , " ", "'${libraries[0]}'")}
+        {printf("| %24s | %12.3f \n", $1, $2)}' $all_file
 
     echo ' ----------------------------------------------------------------------- '
 }
