@@ -9,6 +9,7 @@ tools=('npm' 'yarn')
 base_dir=$PWD
 
 # Option parsing
+
 while getopts n:o: OPT
 do
     case "$OPT" in
@@ -89,8 +90,6 @@ run_benchmark() {
 
         # Install once to generate cache
         rm -rf node_modules
-        rm -f yarn.lock
-        rm -f package-lock.json
         $command_to_run > /dev/null 2>&1
     fi
 
@@ -100,8 +99,6 @@ run_benchmark() {
     for (( i = 1; i <= $repeats ; i++ ))
     do
         rm -rf node_modules
-        rm -f yarn.lock
-        rm -f package-lock.json
 
         # Clean cache
         if [ $clean_cache = 1 ]; then
