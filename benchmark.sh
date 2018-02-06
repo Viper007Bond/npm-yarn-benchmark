@@ -9,7 +9,6 @@ tools=('npm' 'yarn')
 base_dir=$PWD
 
 # Option parsing
-
 while getopts n:o: OPT
 do
     case "$OPT" in
